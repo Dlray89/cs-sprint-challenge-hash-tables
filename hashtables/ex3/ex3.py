@@ -3,6 +3,16 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
+    values = {}
+    result = []
+    for i in arrays:
+        for j in i:
+            if j in values:
+                values[j] += 1
+                if values[j] == len(arrays):
+                    result.append(j)
+            else:
+                values[j] = 1
 
     return result
 
